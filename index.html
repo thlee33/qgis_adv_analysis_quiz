@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QGIS Advanced Analysis Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.js"></script>
+</head>
+
+<body>
+    <div id="background"></div>
+
+    <main id="app">
+        <!-- Main Menu -->
+        <section id="menu-screen" class="screen">
+            <header class="hero">
+                <h1 class="glow-text">QGIS Advanced Analysis</h1>
+                <p class="subtitle">공간분석 심화 퀴즈 챌린지</p>
+            </header>
+
+            <div class="chapter-list" id="chapter-list">
+                <!-- Chapters will be injected here -->
+            </div>
+
+
+        </section>
+
+        <!-- Quiz Screen -->
+        <section id="quiz-screen" class="screen hidden">
+            <nav class="quiz-nav">
+                <button id="back-to-menu" class="icon-btn">←</button>
+                <div class="progress-bar-container">
+                    <div id="quiz-progress-bar" class="progress-bar"></div>
+                </div>
+                <span id="question-counter">1/10</span>
+            </nav>
+
+            <div class="quiz-container">
+                <div class="question-box glass" id="question-box">
+                    <h2 id="question-text">질문이 여기에 표시됩니다.</h2>
+                </div>
+
+                <div class="options-container" id="options-container">
+                    <!-- Options injected here -->
+                </div>
+
+                <div class="feedback-box hidden" id="feedback-box">
+                    <div class="feedback-header">
+                        <span id="feedback-icon">✓</span>
+                        <span id="feedback-title">정답입니다!</span>
+                    </div>
+                    <p id="feedback-text">해설 내용이 여기에 들어갑니다.</p>
+                </div>
+            </div>
+
+            <footer class="quiz-footer">
+                <button id="hint-btn" class="secondary-btn">💡 힌트 보기</button>
+                <div class="spacer"></div>
+                <button id="next-btn" class="primary-btn hidden">다음 문제</button>
+            </footer>
+        </section>
+
+        <!-- Result Screen -->
+        <section id="result-screen" class="screen hidden">
+            <div class="result-card glass">
+                <div class="result-header">
+                    <canvas id="award-confetti"></canvas>
+                    <h2>챕터 완료!</h2>
+                    <div class="score-display">
+                        <span id="final-score">0</span>
+                        <span class="slash">/</span>
+                        <span id="total-questions">10</span>
+                    </div>
+                </div>
+                <div class="result-actions">
+                    <button class="primary-btn" id="finish-btn">목록으로</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Quiz Data Scripts -->
+    <script src="part1_data.js"></script>
+    <script src="part2_data.js"></script>
+    <script src="part3_data.js"></script>
+    <script src="quizData.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
