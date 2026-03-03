@@ -4,3 +4,4 @@
 
 https://thlee33.github.io/qgis_adv_analysis_quiz/
 
+![예시](https://github.com/thlee33/qgis_adv_analysis_quiz/blob/main/demo.png)
